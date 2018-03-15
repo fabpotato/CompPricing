@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Are you sure?</title>
+</head>
+<body>
+    <form>
+        <label for="calculated_price">Calculated Price</label>
+        <input name="calculated_price" id="calculated_price" value="{{ calculated_price }}" readonly>
+        <input type="submit" value="Push" formaction="/sherlock/push/" formmethod="post">
+        <input type="button" value="Cancel" formaction="/sherlock/index/" formmethod="get">
+    </form>
+</body>
+</html>

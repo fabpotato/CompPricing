@@ -5,10 +5,27 @@
     <title>Welcome</title>
 </head>
 <body>
-    <form action="/sherlock/do_stuff/" method="post">
-        <label for="hotel_id">Hotel Code</label>
-        <input name="hotel_id" id="hotel_id" type="text">
-        <input type="submit" value="Fetch">
+    <form method="post">
+        {% if is_hotel == True and is_manual == True %}
+            <label for="hotel_id">Hotel Code</label>
+            <input name="hotel_id" id="hotel_id" type="text" value="{{ hotel_id }}">
+            </br>
+            </br>
+            <select multiple name="competition">
+                {% for x in competition %}
+                    <option value={{ x.hc }}>{{ x.hn }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" formaction="/sherlock/do_stuff/" value="Fetch">
+        {% else %}
+            <label for="hotel_id">Hotel Code</label>
+            <input name="hotel_id" id="hotel_id" type="text">
+            <select id="calculation_method" name="calculation_method">
+                <option value="AUTO">AUTO</option>
+                <option value="MANUAL">MANUAL</option>
+            </select>
+            <input type="submit" formaction="/sherlock/do_stuff/" value="Fetch">
+        {% endif %}
     </form>
 </body>
 </html>
