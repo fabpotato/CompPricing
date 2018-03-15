@@ -6,10 +6,16 @@
 </head>
 <body>
     <form>
-        <label for="calculated_price">Calculated Price</label>
-        <input name="calculated_price" id="calculated_price" value="{{ calculated_price }}" readonly>
+        <input name="hotel_id" id="hotel_id" value="{{ hotel_id }}"><br>
+        <label for="calculated_price">Calculated Price</label><br>
+        <input name="abw_0_price" id="abw_0_price" value="{{ abw_0_price }}" readonly>
+        <input type="checkbox" name="push_abw_0" checked><br>
+        <input name="abw_1_price" id="abw_1_price" value="{{ abw_1_price }}" readonly>
+        <input type="checkbox" name="push_abw_1" checked><br>
+        <input name="abw_2_price" id="abw_2_price" value="{{ abw_2_price }}" readonly>
+        <input type="checkbox" name="push_abw_2" checked><br>
         <input type="submit" value="Push" formaction="/sherlock/push/" formmethod="post">
-        <input type="button" value="Cancel" formaction="/sherlock/index/" formmethod="get">
+        <input type="submit" value="Cancel" onclick="location.href='/sherlock/index/'" formmethod="get">
     </form>
 </body>
 </html>
