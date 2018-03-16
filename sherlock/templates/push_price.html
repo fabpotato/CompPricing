@@ -8,10 +8,13 @@
     <form>
         <input name="hotel_id" id="hotel_id" value="{{ hotel_id }}"><br>
         <label for="calculated_price">Calculated Price</label><br>
+        <label for="abw_0_price">Abw 0 price</label>
         <input name="abw_0_price" id="abw_0_price" value="{{ abw_0_price }}" readonly>
         <input type="checkbox" name="push_abw_0" checked><br>
+        <label for="abw_1_price">Abw 1 price</label>
         <input name="abw_1_price" id="abw_1_price" value="{{ abw_1_price }}" readonly>
         <input type="checkbox" name="push_abw_1" checked><br>
+        <label for="abw_2_price">Abw 2 price</label>
         <input name="abw_2_price" id="abw_2_price" value="{{ abw_2_price }}" readonly>
         <input type="checkbox" name="push_abw_2" checked><br>
         <input type="submit" value="Push" formaction="/sherlock/push/" formmethod="post">
